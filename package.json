@@ -1,0 +1,14 @@
+{
+  "name": "ipl-multi-source-stremio-addon",
+  "version": "1.0.0",
+  "description": "A Stremio addon for auto-updating cricket highlights from BCCI, ICC, Cricket Australia, and ECB.",
+  "main": "addon.js",
+  "scripts": {
+    "start": "node addon.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "stremio-addon-sdk": "^1.0.0"
+  }
+}
