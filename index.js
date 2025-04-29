@@ -1,10 +1,11 @@
-const http = require("http");
-const addonInterface = require("./addon"); // this loads the exported Stremio addon interface
+const express = require("express");
+const addonInterface = require("./addon");
 
+const app = express();
 const port = process.env.PORT || 7000;
 
-http.createServer((req, res) => {
-    addonInterface(req, res);
-}).listen(port, () => {
-    console.log(`Stremio addon running on port ${port}`);
+app.use("/", addonInterface.getRouter());
+
+app.listen(port, () => {
+  console.log(`Stremio addon running on port ${port}`);
 });
